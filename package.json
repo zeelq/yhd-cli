@@ -1,8 +1,8 @@
 {
   "name": "yhd-cli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "create a vue or react project fastly",
+  "main": "yhd.js",
   "bin": {
     "yhd":"yhd.js"
   },
