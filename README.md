@@ -19,6 +19,11 @@ npm install yhd-cli -g
 yhd create 项目名 --项目类型
 yhd create myProject --vue
 
+# 项目类型列表
+vue
+redux
+react-router
+
 # 删除项目
 yhd remove 项目名
 yhd remove myProject
