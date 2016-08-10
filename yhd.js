@@ -35,6 +35,11 @@ const remove = (projectName)=> exec(`rm -rf ${ projectName }`);
  * 替换模板
  * @param projectName
  */
+const useRegistry = (registryName)=> {
+  let registryUrl = cfg['registry'][registryName];
+  exec(`npm config set registry ${registryUrl}`)
+    .then(()=> console.log(`use ${registryUrl} successed`))
+};
 const reset = (projectName)=> {
   let filePath = path.join(__dirname,projectName);
   let templates = ['package.json','index.html','h5cfg.txt'];
@@ -56,6 +61,8 @@ const init = (action,projectName,projectType)=> {
     case 'create': create(projectName, projectType);
       break;
     case 'remove': remove(projectName);
+      break;
+    case 'use':useRegistry(projectName);
       break;
     default:create(projectName,projectType);
   }

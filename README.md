@@ -25,4 +25,7 @@ react-router
 yhd remove 项目名
 yhd remove myProject
 
+# 其他命令
+yhd use npm/cnpm (切换npm或者cnpm)
+
 ```
