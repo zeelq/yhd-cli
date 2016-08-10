@@ -6,9 +6,6 @@
     
 ##安装教程
 ```bash
-#目前还没发布到npm
-下载本项目
-进入本项目的父文件夹
 npm install yhd-cli -g
 ```
 

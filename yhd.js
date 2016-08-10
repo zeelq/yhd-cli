@@ -60,4 +60,5 @@ const init = (action,projectName,projectType)=> {
     default:create(projectName,projectType);
   }
 };
-init(...checkParams());
+// init(...checkParams());
+init(checkParams()[0],checkParams()[1],checkParams()[2]);
