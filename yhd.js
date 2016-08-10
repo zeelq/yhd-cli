@@ -23,8 +23,8 @@ const checkParams = ()=> {
  */
 const create = (projectName, projectType)=> {
   exec(`git clone ${ cfg[projectType] } ${ projectName }`)
-    .then(stdout=> exec(`rm -rf ${ path.join(__dirname, projectName) }/.git`));
-  reset(projectName);
+    .then(stdout=> exec(`rm -rf ${ path.join(__dirname, projectName) }/.git`))
+    .then(stdout=> reset(projectName));
 };
 /**
  * 移除项目
