@@ -40,7 +40,7 @@ const reset = (projectName)=> {
   let templates = ['package.json','index.html','h5cfg.txt'];
   const replaceTemplate = (filePath,projectName)=> {
     read(filePath)
-      .then(data=> data.toString().replace(/\$\{name\}/g,projectName))
+      .then(data=> data.toString().replace(/\$\{\s*name\s*\}/g,projectName))
       .then(data=> write(filePath,data))
   };
   templates.forEach((template)=> replaceTemplate(`${ filePath }/${ template }`,projectName));
