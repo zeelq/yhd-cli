@@ -13,7 +13,7 @@ let read = require('./filePromise').readFile;
 const checkParams = ()=> {
   let action = process.argv[2];
   let projectName = process.argv[3];
-  let projectType = (process.argv[4] || 'vue').replace(/-+/g, '');
+  let projectType = (process.argv[4] || 'vue').replace(/^-+/, '');
   return [action, projectName, projectType];
 };
 /**
